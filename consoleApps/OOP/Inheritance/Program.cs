@@ -21,3 +21,20 @@ Honeybee.ShowPlants();
 Bronx.ShowPlants();
 
 Honeybee.PlantOfTheDay();
+
+// Strawberry.AddPlant(Strawberry, Honeybee);
+
+
+Edible Basil = new Edible("Basil", "Annual Herb", "Weekly");
+Edible Rosemary = new Edible("Rosemary", "Perennial Herb", "Monthly");
+
+GroundCover FourOClocks = new GroundCover("4 O'clocks");
+GroundCover Hasta = new GroundCover("Hasta");
+
+Basil.AddPlant(Basil, Honeybee);
+Rosemary.AddPlant(Rosemary, Honeybee);
+
+Hasta.AddPlant(Hasta, Honeybee);
+
+Hasta.SlowGrow();
+Hasta.AddPlant(Hasta, Honeybee);

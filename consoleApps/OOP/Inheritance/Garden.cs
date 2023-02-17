@@ -5,7 +5,7 @@ class Garden {
 
     public Garden(string theGarden) {
         GardenName = theGarden;
-        GardenCapacity = 20;
+        GardenCapacity = 10;
         AllPlants = new List<Plant>();
     }
 

@@ -16,7 +16,9 @@ class Plant {
         Console.WriteLine($"The new plant is {PlantName}");
     }
 
-    public void AddPlant(Plant PlantName, Garden ChosenGarden) {
+// What plant are we going to move and where are going we going to put it
+    public virtual void AddPlant(Plant APlant, Garden ChosenGarden) {
         ChosenGarden.GardenCapacity -= this.SpreadRate;
+        Console.WriteLine($"{APlant.PlantName} was added to {ChosenGarden.GardenName} and used up {APlant.SpreadRate} spaces so now {ChosenGarden.GardenName} has {ChosenGarden.GardenCapacity} remaining spots");
     }
 }
