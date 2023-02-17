@@ -19,9 +19,13 @@ class Melee : Enemy {
     }
     public Attack Rage() {
         Random rand = new Random();
+
         int attack = rand.Next(AllAttacks.Count);
+
         AllAttacks[attack].DamageAmount += 10;
+
         Console.WriteLine($"{AllAttacks[attack].Name} new damage delt {AllAttacks[attack].DamageAmount}");
+        
         return AllAttacks[attack];
     }
 

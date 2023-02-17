@@ -1,5 +1,10 @@
 class Garden {
-    public string GardenName;
+
+    // Table name = Garden
+    // Column1 = GardenName
+    // column2 = GardenCapacity
+    // join statement1 = AllPlants
+    public string GardenName; 
     public int GardenCapacity;
     public List<Plant> AllPlants;
 
