@@ -27,3 +27,8 @@
 - App was created and run
 - Content added:
     1. Guessing Game
+
+## Pre Database Web Applications
+```
+dotnet new web --no-https -o ProjectName
+```
