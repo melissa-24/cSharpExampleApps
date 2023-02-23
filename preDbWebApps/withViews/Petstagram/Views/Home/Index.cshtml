@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Hello</h2>
+<form action="/addPet" method="post">
+    <section>
+        <label for="PetName">Name</label>
+        <input type="text" name="PetName" id="">
+    </section>
+    <section>
+        <label for="Age">Age</label>
+        <input type="number" name="Age" id="">
+    </section>
+    <section>
+        <label for="HairColor">Hair Color</label>
+        <input type="text" name="HairColor" id="">
+    </section>
+    <button>Submit</button>
+</form>
+
+<h2>@ViewBag.SecretMessage</h2>
+
+<form action="/addNewPet" method="post">
+    <section>
+        <label for="PetName">Name</label>
+        <input type="text" name="PetName" id="">
+    </section>
+    <section>
+        <label for="PetType">Pet type</label>
+        <input type="text" name="PetType" id="">
+    </section>
+    <section>
+        <label for="Age">Age</label>
+        <input type="number" name="Age" id="">
+    </section>
+    <section>
+        <label for="HairColor">Hair Color</label>
+        <input type="text" name="HairColor" id="">
+    </section>
+    <button>Submit</button>
+</form>
