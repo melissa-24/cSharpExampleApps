@@ -1,0 +1,40 @@
+1. The following goes into the program.cs file
+
+
+var builder = WebApplication.CreateBuilder(args);
+// Add our service
+builder.Services.AddControllersWithViews();
+var app = builder.Build();
+
+
+// Our builder code
+app.UseStaticFiles();
+app.UseRouting();
+app.UseAuthorization();
+
+// app.MapGet("/", () => "Hello World!");
+
+app.MapControllerRoute(    
+    name: "default",    
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.Run();
+
+
+2. Create a Controllers folder
+3. Each controller file will start the same way
+
+
+
+using Microsoft.AspNetCore.Mvc;
+
+namespace YourNamespace.Controllers;   
+public class HelloController : Controller   
+{      
+    [HttpGet("")]
+    public string Index()        
+    {            
+    	return "Hello World from HelloController!";        
+    }    
+}
+
