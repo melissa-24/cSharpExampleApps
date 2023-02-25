@@ -18,22 +18,22 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
-    {
-        return View();
+    // public IActionResult Privacy()
+    // {
+    //     return View();
+    // }
+    [HttpPost("/addPet")]
+    public RedirectToActionResult AddPet(string PetName, int Age, string HairColor) {
+        return RedirectToAction("Index"); // redirecting to the function name that we want it to redirect too
     }
     [HttpPost("/addPet")]
-    // public RedirectToActionResult AddPet(string PetName, int Age, string HairColor) {
-    //     return RedirectToAction("Index"); // redirecting to the function name that we want it to redirect too
-    // }
-    // [HttpPost("/addPet")]
     // public RedirectResult AddPet(string PetName, int Age, string HairColor) {
     //     return Redirect("/"); // redirecting to the url we want
     // }
-    public IActionResult AddPet(string PetName, int Age, string HairColor){
-        Console.WriteLine($"{PetName} is {Age} and has {HairColor} ");
-        return Redirect("/");
-    }
+    // public IActionResult AddPet(string PetName, int Age, string HairColor){
+    //     Console.WriteLine($"{PetName} is {Age} and has {HairColor} ");
+    //     return Redirect("/");
+    // }
 
 //IActionResult might be the best option but the others can be used to be more specific
 
