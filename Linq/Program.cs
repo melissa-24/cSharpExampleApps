@@ -20,10 +20,10 @@ List<int> numsOverTen = numbers.Where(num => num > 10).ToList();
 // .tolist is part of Linq that allows us to return a list
 // /first or default can replace where (where will alsways return)
 
-Console.WriteLine(string.Join(", ", numsOverTen));
+// Console.WriteLine(string.Join(", ", numsOverTen));
 // this is how we can print the list more as a list
 
-Console.WriteLine("----------------------------------------");
+// Console.WriteLine("----------------------------------------");
 
 // numbers is like our table where we are selecting all
 // .where is that clause we add to the end of our sql query.
@@ -32,11 +32,11 @@ Console.WriteLine("----------------------------------------");
 List<string> users = new List<string>() {
     "Emily", "Melissa", "Juli", "Brianna"
 };
-Console.WriteLine(string.Join(", ", users));
+// Console.WriteLine(string.Join(", ", users));
 int minNameLength = users.Min(user => user.Length);
-Console.WriteLine(minNameLength);
+// Console.WriteLine(minNameLength);
 
-Console.WriteLine("----------------------------------------");
+// Console.WriteLine("----------------------------------------");
 
 List<Movie> movies = new List<Movie> {
     new Movie("Back to the Future", "Michael J. Fox", 10, 1985),
@@ -61,36 +61,36 @@ Movie? oneMovie = movies.FirstOrDefault(m => m.Title == "Star Trek");
 
 // chosenMovie.ToString();
 
-if(oneMovie != null) {
-    Console.WriteLine(oneMovie.ToString());
-} else {
-    Console.WriteLine("Movie not in list");
-}
+// if(oneMovie != null) {
+//     Console.WriteLine(oneMovie.ToString());
+// } else {
+//     Console.WriteLine("Movie not in list");
+// }
 
 Console.WriteLine("----------------------------------------");
 
 oneMovie = movies.FirstOrDefault(m => m.Rating == 10);
-if(oneMovie != null) {
-    Console.WriteLine(oneMovie.ToString());
-} else {
-    Console.WriteLine("Movie not in list");
-}
+// if(oneMovie != null) {
+//     Console.WriteLine(oneMovie.ToString());
+// } else {
+//     Console.WriteLine("Movie not in list");
+// }
 
-Console.WriteLine("----------------------------------------");
+// Console.WriteLine("----------------------------------------");
 
 Movie? oldestMovie = movies.FirstOrDefault(movie => movie.Year == movies.Min(m => m.Year));
-if(oldestMovie != null) {
-    Console.WriteLine(oldestMovie);
-} else {
-    Console.WriteLine("Movie not in list");
-}
+// if(oldestMovie != null) {
+//     Console.WriteLine(oldestMovie);
+// } else {
+//     Console.WriteLine("Movie not in list");
+// }
 
-Console.WriteLine("----------------------------------------");
+// Console.WriteLine("----------------------------------------");
 
 bool ratingOver9 = movies.Any(movie => movie.Rating >  9);
-Console.WriteLine($"are any movies rated above 9? {ratingOver9}");
+// Console.WriteLine($"are any movies rated above 9? {ratingOver9}");
 
-Console.WriteLine("----------------------------------------");
+// Console.WriteLine("----------------------------------------");
 
 List<Movie> filterdMovies = movies.OrderByDescending(movie => movie.Title).ToList();
 PrintEach(filterdMovies);
@@ -98,23 +98,23 @@ PrintEach(filterdMovies);
 Console.WriteLine("----------------------------------------");
 
 filterdMovies = movies.Where(movie => movie.LeadActor == "Michael J. Fox").OrderByDescending(movie => movie.Title).ToList();
-PrintEach(filterdMovies);
+// PrintEach(filterdMovies);
 
-Console.WriteLine("----------------------------------------");
+// Console.WriteLine("----------------------------------------");
 
 filterdMovies = movies.Where(movie => movie.Title.StartsWith("T")).ToList();
-PrintEach(filterdMovies);
+// PrintEach(filterdMovies);
 
-Console.WriteLine("----------------------------------------");
+// Console.WriteLine("----------------------------------------");
 
 var selected = movies.Select(m => m.Title);
-PrintEach(selected);
+// PrintEach(selected);
 
-Console.WriteLine("----------------------------------------");
+// Console.WriteLine("----------------------------------------");
 
 selected = movies
     .Where(movie => movie.LeadActor == "Michael J. Fox")
     .Select(movie => movie.Title)
     .OrderBy(title => title)
     .ToList();
-PrintEach(selected);
+// PrintEach(selected);
