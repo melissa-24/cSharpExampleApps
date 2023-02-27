@@ -47,7 +47,7 @@ public class HomeController : Controller
             new User("Copper", "Tone", "Nugglet"),
             new User("Mr", "Tucker", "mrT"),
         };
-        List<User> orderUsers = users.OrderByDescending(User => User.Username).ToString();
+        List<User> orderUsers = users.OrderByDescending(user => user.Username).ToString();
 
         Console.WriteLine(orderUsers);
         ViewBag.orderUsers = orderUsers;
