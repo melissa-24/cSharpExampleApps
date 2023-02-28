@@ -1,0 +1,8 @@
+@{
+    ViewData["Title"] = "Bear";
+}
+@model List<Bear>
+
+    @foreach(Bear b in Model){
+        <h2>@b.Title</h2>
+    }
