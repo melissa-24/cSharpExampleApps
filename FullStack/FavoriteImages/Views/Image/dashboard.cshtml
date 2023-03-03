@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Dashboard";
+}
+@model List<Image>
+<h1>Welcome back, @Context.Session.GetString("name")</h1>
+
+<div class="row">
+    @foreach(Image i in Model) {
+    <div class="column">
+        <img src="@i.Img" alt="@i.Name">
+        <h4>@i.Name</h4>
+    </div>
+}
+</div>
